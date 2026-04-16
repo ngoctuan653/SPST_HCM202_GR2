@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tư tưởng Hồ Chí Minh - Tinh hoa dân tộc</title>
+    <meta name="description"
+        content="Sản phẩm sáng tạo môn Tư tưởng Hồ Chí Minh - Landing page trình bày nội dung học phần một cách trực quan và hiện đại">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">HCM<span>Thought</span></a>
+            <div class="nav-links">
+                <a href="#about">Ý nghĩa</a>
+                <a href="#timeline">Hành trình</a>
+                <a href="#chapters">6 Chương</a>
+                <a href="#application">Thực tiễn</a>
+                <a href="#qa">Q&A</a>
+            </div>
+            <button id="theme-toggle" class="btn-icon" aria-label="Đổi giao diện">
+                <i data-lucide="moon" class="icon-moon"></i>
+                <i data-lucide="sun" class="icon-sun"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-inner">
+            <div class="hero-content reveal">
+                <div class="badge">Sản phẩm sáng tạo - Học phần Tư tưởng Hồ Chí Minh</div>
+                <h1 class="hero-title">Khát vọng <br><span class="text-highlight">Độc lập & Tự do</span></h1>
+                <p class="hero-subtitle">Hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng
+                    Việt Nam, kết quả của sự vận dụng và phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện cụ thể
+                    của nước ta.</p>
+                <div class="hero-actions">
+                    <a href="#chapters" class="btn btn-primary">Khám phá nội dung <i data-lucide="arrow-right"></i></a>
+                    <a href="#about" class="btn btn-outline">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="hero-image reveal">
+                <div class="hero-img-frame">
+                    <img src="images/hcm_1946.jpg"
+                        alt="Chủ tịch Hồ Chí Minh - Ảnh chân dung năm 1946" loading="eager">
+                    <div class="hero-img-decoration"></div>
+                </div>
+                <div class="hero-img-caption">Chủ tịch Hồ Chí Minh (1890 - 1969)</div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about" aria-label="Cuộn xuống"><i data-lucide="chevron-down"></i></a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Giới thiệu môn học</h2>
+                <p class="section-desc">Vì sao chúng ta nghiên cứu Tư tưởng Hồ Chí Minh?</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-img reveal reveal-left">
+                    <div class="img-wrapper">
+                        <div class="abstract-shape shape-1"></div>
+                        <div class="abstract-shape shape-2"></div>
+                        <img src="images/timeline_5.png"
+                            alt="Quảng trường Ba Đình ngày 2/9/1945 - Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập"
+                            class="about-photo" loading="lazy">
+                    </div>
+                    <p class="img-caption">Quảng trường Ba Đình, 2/9/1945</p>
+                </div>
+                <div class="about-text reveal reveal-right">
+                    <h3 class="subsection-title">Mục tiêu cốt lõi:<br>Giải phóng dân tộc, giải phóng con người</h3>
+                    <ul class="about-list">
+                        <li>
+                            <div class="icon-box"><i data-lucide="target"></i></div>
+                            <div>
+                                <h4>Nhận thức sâu sắc</h4>
+                                <p>Hiểu rõ hệ thống quan điểm của Chủ tịch Hồ Chí Minh về cách mạng Việt Nam.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i data-lucide="compass"></i></div>
+                            <div>
+                                <h4>Kim chỉ nam hành động</h4>
+                                <p>Nền tảng tư tưởng và kim chỉ nam cho hành động của Đảng và cách mạng.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i data-lucide="users"></i></div>
+                            <div>
+                                <h4>Phát triển toàn diện</h4>
+                                <p>Xây dựng thế giới quan, phương pháp luận khoa học, bồi dưỡng phẩm chất đạo đức.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline section bg-light" id="timeline">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Quá trình hình thành</h2>
+                <p class="section-desc">Nhấn vào từng giai đoạn để xem chi tiết</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <!-- Timeline 1 -->
+                <div class="timeline-item reveal" data-timeline="1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Trước 1911</div>
+                        <h3>Hình thành tư tưởng yêu nước</h3>
+                        <p>Tiếp thu truyền thống tốt đẹp của dân tộc, tinh hoa văn hóa nhân loại. Hình thành hoài bão
+                            cứu nước.</p>
+                        <button class="timeline-toggle-btn" onclick="openTimelineModal(1)"><span>Xem chi tiết chuyên sâu</span> <i
+                                data-lucide="external-link"></i></button>
+                    </div>
+                </div>
+
+                <!-- Timeline 2 -->
+                <div class="timeline-item reveal" data-timeline="2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1911 - 1920</div>
+                        <h3>Tìm thấy con đường cứu nước</h3>
+                        <p>Khảo nghiệm thực tiễn, đến với chủ nghĩa Mác - Lênin. Bước ngoặt từ chủ nghĩa yêu nước đến
+                            chủ nghĩa cộng sản.</p>
+                        <button class="timeline-toggle-btn" onclick="openTimelineModal(2)"><span>Xem chi tiết chuyên sâu</span> <i
+                                data-lucide="external-link"></i></button>
+                    </div>
+                </div>
+
+                <!-- Timeline 3 -->
+                <div class="timeline-item reveal" data-timeline="3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1921 - 1930</div>
+                        <h3>Hình thành cơ bản tư tưởng</h3>
+                        <p>Nghiên cứu, truyền bá chủ nghĩa Mác - Lênin. Sáng lập Đảng Cộng sản Việt Nam với Cương lĩnh
+                            chính trị đầu tiên.</p>
+                        <button class="timeline-toggle-btn" onclick="openTimelineModal(3)"><span>Xem chi tiết chuyên sâu</span> <i
+                                data-lucide="external-link"></i></button>
+                    </div>
+                </div>
+
+                <!-- Timeline 4 -->
+                <div class="timeline-item reveal" data-timeline="4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1930 - 1945</div>
+                        <h3>Khắc phục thử thách, đi tới thắng lợi</h3>
+                        <p>Lãnh đạo cách mạng giải phóng dân tộc tiến tới Cách mạng Tháng Tám thành công, lập nên nước
+                            VNDCCH.</p>
+                        <button class="timeline-toggle-btn" onclick="openTimelineModal(4)"><span>Xem chi tiết chuyên sâu</span> <i
+                                data-lucide="external-link"></i></button>
+                    </div>
+                </div>
+
+                <!-- Timeline 5 -->
+                <div class="timeline-item reveal" data-timeline="5">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1945 - 1969</div>
+                        <h3>Tiếp tục phát triển, hoàn thiện</h3>
+                        <p>Tư tưởng về kháng chiến, kiến quốc. Về xây dựng CNXH ở miền Bắc và đấu tranh giải phóng miền
+                            Nam.</p>
+                        <button class="timeline-toggle-btn" onclick="openTimelineModal(5)"><span>Xem chi tiết chuyên sâu</span> <i
+                                data-lucide="external-link"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapters Section -->
+    <section class="chapters section" id="chapters">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Nội dung 6 Chương</h2>
+                <p class="section-desc">Nhấn vào từng chương để xem kiến thức trọng tâm chi tiết</p>
+            </div>
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="card reveal card-hover" data-chapter="1">
+                    <div class="card-icon"><i data-lucide="search"></i></div>
+                    <div class="card-number">01</div>
+                    <h3 class="card-title">Khái niệm, đối tượng, phương pháp</h3>
+                    <p class="card-desc">Cung cấp tri thức nền tảng về khái niệm, đối tượng nghiên cứu và ý nghĩa học
+                        tập đối với sinh viên.</p>
+                    <span class="card-cta">Nhấn để xem chi tiết <i data-lucide="arrow-right"></i></span>
+                </div>
+                <!-- Card 2 -->
+                <div class="card reveal card-hover" data-chapter="2" style="transition-delay: 0.1s;">
+                    <div class="card-icon"><i data-lucide="git-branch"></i></div>
+                    <div class="card-number">02</div>
+                    <h3 class="card-title">Cơ sở, quá trình hình thành</h3>
+                    <p class="card-desc">Nguồn gốc lý luận, thực tiễn và các giai đoạn hình thành, phát triển tư tưởng
+                        Hồ Chí Minh.</p>
+                    <span class="card-cta">Nhấn để xem chi tiết <i data-lucide="arrow-right"></i></span>
+                </div>
+                <!-- Card 3 -->
+                <div class="card reveal card-hover" data-chapter="3" style="transition-delay: 0.2s;">
+                    <div class="card-icon"><i data-lucide="flag"></i></div>
+                    <div class="card-number">03</div>
+                    <h3 class="card-title">Độc lập dân tộc & Chủ nghĩa Xã hội</h3>
+                    <p class="card-desc">Sợi chỉ đỏ xuyên suốt của cách mạng: Độc lập dân tộc phải gắn liền với chủ
+                        nghĩa xã hội.</p>
+                    <span class="card-cta">Nhấn để xem chi tiết <i data-lucide="arrow-right"></i></span>
+                </div>
+                <!-- Card 4 -->
+                <div class="card reveal card-hover" data-chapter="4">
+                    <div class="card-icon"><i data-lucide="landmark"></i></div>
+                    <div class="card-number">04</div>
+                    <h3 class="card-title">Đảng CS & Nhà nước của Dân</h3>
+                    <p class="card-desc">Vai trò lãnh đạo của Đảng và xây dựng Nhà nước pháp quyền XHCN "của dân, do
+                        dân, vì dân".</p>
+                    <span class="card-cta">Nhấn để xem chi tiết <i data-lucide="arrow-right"></i></span>
+                </div>
+                <!-- Card 5 -->
+                <div class="card reveal card-hover" data-chapter="5" style="transition-delay: 0.1s;">
+                    <div class="card-icon"><i data-lucide="globe"></i></div>
+                    <div class="card-number">05</div>
+                    <h3 class="card-title">Đại đoàn kết dân tộc & Quốc tế</h3>
+                    <p class="card-desc">"Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công".</p>
+                    <span class="card-cta">Nhấn để xem chi tiết <i data-lucide="arrow-right"></i></span>
+                </div>
+                <!-- Card 6 -->
+                <div class="card reveal card-hover" data-chapter="6" style="transition-delay: 0.2s;">
+                    <div class="card-icon"><i data-lucide="heart"></i></div>
+                    <div class="card-number">06</div>
+                    <h3 class="card-title">Văn hóa, đạo đức, con người</h3>
+                    <p class="card-desc">Tư tưởng về sức mạnh mềm: văn hóa soi đường, tu dưỡng đạo đức cách mạng, chiến
+                        lược trồng người.</p>
+                    <span class="card-cta">Nhấn để xem chi tiết <i data-lucide="arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter Modal -->
+    <div class="modal-overlay" id="chapterModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('chapterModal')"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon" id="modalIcon"></div>
+                <div>
+                    <div class="modal-chapter-num" id="modalChapterNum"></div>
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                </div>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Timeline Modal -->
+    <div class="modal-overlay" id="timelineModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal('timelineModal')"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon" id="timelineModalIcon"></div>
+                <div>
+                    <div class="modal-chapter-num" id="timelineModalDate"></div>
+                    <h2 class="modal-title" id="timelineModalTitle"></h2>
+                </div>
+            </div>
+            <div class="modal-body" id="timelineModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Application Section -->
+    <section class="application section bg-gradient" id="application">
+        <div class="container">
+            <div class="application-content reveal">
+                <h2 class="section-title text-white">Ý nghĩa thực tiễn hiện nay</h2>
+                <p class="section-desc" style="color: rgba(255,255,255,0.8); margin-bottom: 50px;">Liên hệ vận dụng tư
+                    tưởng Hồ Chí Minh trong bối cảnh Việt Nam hiện đại</p>
+                <div class="app-cards">
+                    <div class="app-card">
+                        <i data-lucide="zap"></i>
+                        <h3>Công cuộc Đổi Mới</h3>
+                        <p>Đẩy mạnh sự nghiệp đổi mới, CNH-HĐH đất nước gắn với phát triển kinh tế tri thức. Xây dựng
+                            nền kinh tế thị trường định hướng XHCN.</p>
+                    </div>
+                    <div class="app-card">
+                        <i data-lucide="shield-check"></i>
+                        <h3>Bảo vệ Tổ quốc</h3>
+                        <p>Xây dựng thế trận lòng dân vững chắc, bảo vệ chủ quyền biên giới, biển đảo. Kết hợp phát
+                            triển kinh tế với quốc phòng - an ninh.</p>
+                    </div>
+                    <div class="app-card">
+                        <i data-lucide="user-check"></i>
+                        <h3>Xây dựng Đảng</h3>
+                        <p>Đẩy mạnh học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh. Phòng chống "tự diễn
+                            biến", "tự chuyển hóa".</p>
+                    </div>
+                    <div class="app-card">
+                        <i data-lucide="handshake"></i>
+                        <h3>Ngoại giao đa phương</h3>
+                        <p>Đường lối đối ngoại "thêm bạn, bớt thù". Việt Nam là thành viên tích cực của ASEAN, Liên Hợp
+                            Quốc, WTO...</p>
+                    </div>
+                    <div class="app-card">
+                        <i data-lucide="graduation-cap"></i>
+                        <h3>Giáo dục & Văn hóa</h3>
+                        <p>Đổi mới căn bản, toàn diện giáo dục. Bảo tồn và phát huy bản sắc văn hóa dân tộc trong hội
+                            nhập quốc tế.</p>
+                    </div>
+                    <div class="app-card">
+                        <i data-lucide="heart-handshake"></i>
+                        <h3>Phong trào thanh niên</h3>
+                        <p>Sinh viên tình nguyện, hiến máu nhân đạo, mùa hè xanh... Vận dụng tinh thần Bác Hồ trong thực
+                            tiễn đời sống hàng ngày.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q&A Section -->
+    <section class="qa section" id="qa">
+        <div class="container reveal">
+            <div class="section-header">
+                <h2 class="section-title">Hỏi đáp & Vận dụng</h2>
+                <p class="section-desc">Những câu hỏi thảo luận phổ biến trong học phần</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Cốt lõi của Tư tưởng Hồ Chí Minh là gì? <i data-lucide="plus"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Là tư tưởng về <strong>độc lập dân tộc gắn liền với chủ nghĩa xã hội</strong>. Giải phóng dân
+                            tộc, giải phóng giai cấp, giải phóng con người là mục tiêu xuyên suốt. Đây là sợi chỉ đỏ chi
+                            phối toàn bộ hệ thống tư tưởng, đạo đức, phong cách Hồ Chí Minh.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Sinh viên vận dụng tư tưởng đạo đức HCM như thế nào? <i data-lucide="plus"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Học tập nâng cao trình độ chuyên môn, rèn luyện đạo đức <em>"Trung với nước, hiếu với
+                                dân"</em>, có tinh thần tương thân tương ái, ý chí tự lập tự cường, chống bệnh lười
+                            biếng. Cụ thể: chăm chỉ học tập, tham gia hoạt động tình nguyện, giữ gìn lối sống lành mạnh,
+                            đấu tranh chống tiêu cực.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Tầm quan trọng của tư tưởng "lấy dân làm gốc"? <i data-lucide="plus"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Dân là chủ thể của đất nước. <em>"Bao nhiêu lợi ích đều vì dân. Bao nhiêu quyền hạn đều của
+                                dân"</em>. Tư tưởng này định hướng xây dựng Nhà nước pháp quyền XHCN — nhà nước thật sự
+                            là của nhân dân, đảm bảo quyền lực thuộc về nhân dân.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Tại sao phải gắn độc lập dân tộc với CNXH? <i data-lucide="plus"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Vì độc lập dân tộc mà không có CNXH thì độc lập đó cũng không có ý nghĩa gì. Theo Hồ Chí
+                            Minh: <em>"Nước độc lập mà dân không hưởng hạnh phúc tự do, thì độc lập cũng chẳng có nghĩa
+                                lý gì"</em>. CNXH chính là con đường để đảm bảo quyền lợi thực sự cho nhân dân sau khi
+                            giành được độc lập.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Đoàn kết có vai trò gì trong tư tưởng HCM? <i data-lucide="plus"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p><em>"Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công"</em> — Đoàn
+                            kết là sức mạnh vô địch. Tư tưởng đại đoàn kết toàn dân tộc bao gồm: đoàn kết trong Đảng,
+                            đoàn kết dân tộc (Mặt trận Tổ quốc), đoàn kết quốc tế (với các nước XHCN, phong trào giải
+                            phóng dân tộc, lực lượng hòa bình, tiến bộ trên thế giới).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="conclusion section text-center" id="conclusion">
+        <div class="container reveal">
+            <div class="conclusion-portrait">
+                <img src="images/hcm_1946.jpg"
+                    alt="Chủ tịch Hồ Chí Minh" loading="lazy">
+            </div>
+            <i data-lucide="quote" class="quote-icon"></i>
+            <h2 class="conclusion-quote">"Non sông Việt Nam có trở nên tươi đẹp hay không, dân tộc Việt Nam có bước tới
+                đài vinh quang để sánh vai với các cường quốc năm châu được hay không, chính là nhờ một phần lớn ở công
+                học tập của các em."</h2>
+            <p class="conclusion-author">- Hồ Chí Minh -</p>
+            <div class="conclusion-message">
+                <p>Tư tưởng Hồ Chí Minh mãi mãi là ngọn đuốc soi đường cho cách mạng Việt Nam. Mỗi sinh viên hãy ra sức
+                    học tập, rèn luyện, sống có ích, góp phần xây dựng đất nước ngày càng phồn vinh, hạnh phúc.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">HCM<span>Thought</span></div>
+            <p>Sản phẩm sáng tạo - Học phần Tư tưởng Hồ Chí Minh</p>
+            <div class="footer-links">
+                <a href="#hero">Trang chủ</a> •
+                <a href="#timeline">Quá trình</a> •
+                <a href="#chapters">Nội dung</a> •
+                <a href="#qa">Hỏi đáp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
