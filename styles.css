@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     /* Colors (Light Theme) */
     --primary: #DA251D;
     --primary-light: #FF4D45;
@@ -54,7 +54,7 @@ html {
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
     color: var(--text-main);
     background-color: var(--bg-color);
     line-height: 1.6;
@@ -681,7 +681,7 @@ li {
     font-size: 0.9rem;
     cursor: pointer;
     transition: var(--transition);
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 .timeline-toggle-btn:hover {
@@ -1317,7 +1317,7 @@ li {
     justify-content: space-between;
     align-items: center;
     transition: var(--transition);
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 .accordion-header i {
@@ -2257,5 +2257,109 @@ footer {
 @media (max-width: 600px) {
     .pledge-cards {
         grid-template-columns: 1fr;
+    }
+}
+
+.card-img { width: 100%; border-radius: var(--radius); margin-top: 18px; border: 1px solid var(--border-color); aspect-ratio: 16/9; object-fit: cover; transition: transform 0.3s; } .app-card:hover .card-img, .influence-card:hover .card-img { transform: scale(1.03); } .timeline-img { width: 100%; border-radius: var(--radius); margin-top: 16px; box-shadow: var(--shadow-sm); object-fit: cover; max-height: 250px; } 
+
+/* ========================================
+   PHOTO GALLERY SECTION
+   ======================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 280px;
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-year {
+    display: inline-block;
+    padding: 4px 14px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: white;
+    width: fit-content;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.gallery-overlay h3 {
+    font-size: 1.15rem;
+    color: white;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.gallery-overlay p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+}
+
+.gallery-item-tall {
+    grid-row: span 2;
+}
+
+.gallery-item-wide {
+    grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 240px;
+    }
+    .gallery-item-wide {
+        grid-column: span 1;
+    }
+    .gallery-item-tall {
+        grid-row: span 1;
+    }
+    .gallery-overlay {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 260px;
     }
 }
