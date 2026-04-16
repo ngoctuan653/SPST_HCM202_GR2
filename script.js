@@ -32,6 +32,9 @@ window.addEventListener('scroll', () => {
         progressBar.style.width = scrolled + "%";
     }
 
+    // Parallax background offset
+    document.body.style.setProperty('--scroll-y', winScroll + 'px');
+
     // Navbar khi scroll
     const navbar = document.getElementById('navbar');
     if (winScroll > 50) {
@@ -252,230 +255,298 @@ const timelineData = {
 const chapterData = {
     1: {
         icon: 'search',
-        title: 'Khái niệm, đối tượng, phương pháp nghiên cứu',
+        title: 'Chương 1: Khái niệm, đối tượng, phương pháp nghiên cứu và ý nghĩa học tập',
         content: `
             <img src="images/chapter_1.png" alt="Khái niệm và phương pháp nghiên cứu" class="modal-img" loading="lazy">
             <div class="modal-section">
-                <h3><i data-lucide="book-open"></i> Khái niệm Tư tưởng Hồ Chí Minh</h3>
-                <p>Tư tưởng Hồ Chí Minh là <strong>một hệ thống quan điểm toàn diện và sâu sắc</strong> về những vấn đề cơ bản của cách mạng Việt Nam, từ cách mạng dân tộc dân chủ nhân dân đến cách mạng xã hội chủ nghĩa.</p>
-                <p>Là kết quả của sự vận dụng sáng tạo và phát triển chủ nghĩa Mác - Lênin vào điều kiện cụ thể của Việt Nam, đồng thời kế thừa và phát triển các giá trị truyền thống tốt đẹp của dân tộc, tiếp thu tinh hoa văn hóa nhân loại.</p>
+                <h3>A. Mục tiêu</h3>
+                <p>Cung cấp cho sinh viên những tri thức nền tảng nhất: hiểu rõ tư tưởng Hồ Chí Minh là gì, học phần này nghiên cứu về điều gì, dùng phương pháp nào để nghiên cứu và việc học tập tư tưởng Hồ Chí Minh có ý nghĩa như thế nào đối với nhận thức, hành động thực tiễn của sinh viên.</p>
             </div>
             <div class="modal-section">
-                <h3><i data-lucide="crosshair"></i> Đối tượng nghiên cứu</h3>
-                <ul>
-                    <li><strong>Hệ thống quan điểm, lý luận</strong> của Hồ Chí Minh về cách mạng Việt Nam trong các tác phẩm, bài viết, bài nói, chỉ thị, nghị quyết...</li>
-                    <li><strong>Quá trình vận động, phát triển</strong> của tư tưởng Hồ Chí Minh qua các thời kỳ lịch sử.</li>
-                    <li><strong>Giá trị thực tiễn</strong> của tư tưởng Hồ Chí Minh đối với cách mạng Việt Nam và thế giới.</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <h3><i data-lucide="wrench"></i> Phương pháp nghiên cứu</h3>
-                <ul>
-                    <li><strong>Phương pháp luận:</strong> Dựa trên cơ sở thế giới quan, phương pháp luận duy vật biện chứng của chủ nghĩa Mác - Lênin.</li>
-                    <li><strong>Phương pháp lịch sử - logic:</strong> Nghiên cứu sự hình thành, phát triển tư tưởng theo trình tự thời gian, gắn với bối cảnh lịch sử cụ thể.</li>
-                    <li><strong>Phương pháp liên ngành:</strong> Kết hợp chính trị học, sử học, văn hóa học, triết học... để hiểu toàn diện.</li>
-                    <li><strong>Phương pháp phân tích - tổng hợp:</strong> Phân tích từng luận điểm cụ thể, sau đó tổng hợp thành hệ thống hoàn chỉnh.</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <h3><i data-lucide="graduation-cap"></i> Ý nghĩa học tập đối với sinh viên</h3>
-                <div class="modal-highlight">
-                    <p>"Học tập tư tưởng Hồ Chí Minh giúp sinh viên nâng cao năng lực tư duy lý luận, bồi dưỡng phẩm chất đạo đức cách mạng, xây dựng niềm tin khoa học vào sự nghiệp đổi mới do Đảng lãnh đạo."</p>
+                <h3>B. Nội dung</h3>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">I - Khái niệm tư tưởng Hồ Chí Minh</h4>
+                    <p>Tư tưởng Hồ Chí Minh là <strong>một hệ thống quan điểm toàn diện và sâu sắc</strong> về những vấn đề cơ bản của cách mạng Việt Nam, từ cách mạng dân tộc dân chủ nhân dân đến cách mạng xã hội chủ nghĩa.</p>
+                    <p>Là kết quả của sự vận dụng sáng tạo và phát triển chủ nghĩa Mác - Lênin vào điều kiện cụ thể của nước ta, kế thừa và phát triển các giá trị truyền thống tốt đẹp của dân tộc, tiếp thu tinh hoa văn hóa nhân loại. Tư tưởng của Người là tài sản tinh thần vô giá của Đảng và dân tộc ta, mãi mãi soi đường cho sự nghiệp cách mạng của Việt Nam.</p>
                 </div>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">II - Đối tượng nghiên cứu</h4>
+                    <ul>
+                        <li><strong>Hệ thống quan điểm, lý luận:</strong> Nghiên cứu hệ thống quan điểm của Hồ Chí Minh về hệ thống các vấn đề lý luận và thực tiễn của cách mạng Việt Nam.</li>
+                        <li><strong>Quá trình vận động, phát triển:</strong> Sự vận động, hiện thực hóa của các tư tưởng đó trong thực tiễn cách mạng qua các thời kỳ lịch sử.</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">III - Phương pháp nghiên cứu</h4>
+                    <ul>
+                        <li><strong>Cơ sở phương pháp luận:</strong> Chủ nghĩa duy vật biện chứng và chủ nghĩa duy vật lịch sử Mác - Lênin.</li>
+                        <li><strong>Các phương pháp cụ thể:</strong>
+                            <br>- Phương pháp lịch sử - logic (Gắn lý luận với bối cảnh lịch sử cụ thể).
+                            <br>- Phương pháp liên ngành (Kết hợp văn hóa học, sử học, triết học...).
+                            <br>- Phương pháp phân tích, văn bản học (Qua hệ thống bài viết, di sản để lại).
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">IV - Ý nghĩa của việc học tập môn Tư tưởng Hồ Chí Minh</h4>
+                    <div class="modal-highlight">
+                        <p>Nâng cao năng lực tư duy lý luận và phương pháp công tác. Bồi dưỡng phẩm chất đạo đức cách mạng, rèn luyện bản lĩnh chính trị tư tưởng kiên định. Thiết lập ý thức trách nhiệm công dân, niềm tin khoa học vào sự nghiệp đổi mới.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3>C. Câu hỏi ôn tập</h3>
+                <ul style="list-style-type: decimal; padding-left: 20px;">
+                    <li>Phân tích định nghĩa tư tưởng Hồ Chí Minh được nêu trong Văn kiện Đại hội đại biểu toàn quốc lần thứ XI của Đảng?</li>
+                    <li>Làm rõ đối tượng nghiên cứu và các phương pháp nghiên cứu của môn học Tư tưởng Hồ Chí Minh?</li>
+                    <li>Sự cần thiết và ý nghĩa của việc học tập môn Tư tưởng Hồ Chí Minh đối với thế hệ trẻ hiện nay?</li>
+                </ul>
             </div>
         `
     },
     2: {
         icon: 'git-branch',
-        title: 'Cơ sở, quá trình hình thành tư tưởng Hồ Chí Minh',
+        title: 'Chương 2: Cơ sở, quá trình hình thành và phát triển tư tưởng Hồ Chí Minh',
         content: `
             <img src="images/chapter_2.png" alt="Cơ sở lịch sử và quá trình hình thành" class="modal-img" loading="lazy">
             <div class="modal-section">
-                <h3><i data-lucide="layers"></i> Cơ sở khách quan</h3>
-                <ul>
-                    <li><strong>Bối cảnh lịch sử Việt Nam cuối TK XIX - đầu TK XX:</strong> Đất nước bị xâm lược, nhân dân bị áp bức. Các phong trào yêu nước theo lập trường phong kiến và tư sản đều thất bại → Khủng hoảng đường lối cứu nước.</li>
-                    <li><strong>Bối cảnh thời đại:</strong> CNTB chuyển sang giai đoạn đế quốc chủ nghĩa, phong trào công nhân phát triển mạnh. Cách mạng Tháng Mười Nga (1917) mở ra thời đại mới — thời đại quá độ từ CNTB lên CNXH.</li>
-                </ul>
+                <h3>A. Mục tiêu</h3>
+                <p>Nắm vững nguồn gốc, cơ sở lý luận, thực tiễn hình thành tư tưởng Hồ Chí Minh. Nhận thức đúng đắn về sự chuyển biến tư tưởng mang tính quy luật và những mốc son lịch sử quan trọng trong quá trình hình thành, phát triển tư tưởng của Người.</p>
             </div>
             <div class="modal-section">
-                <h3><i data-lucide="brain"></i> Cơ sở tư tưởng - lý luận</h3>
-                <ul>
-                    <li><strong>Giá trị truyền thống dân tộc:</strong> Chủ nghĩa yêu nước, tinh thần đoàn kết, nhân ái, cần cù, sáng tạo — được hun đúc qua hàng ngàn năm dựng nước và giữ nước.</li>
-                    <li><strong>Tinh hoa văn hóa nhân loại:</strong> Tiếp thu có chọn lọc tư tưởng Nho giáo (đạo đức, chính danh), Phật giáo (từ bi, bình đẳng), tư tưởng dân chủ phương Tây (tự do, bình đẳng, bác ái).</li>
-                    <li><strong>Chủ nghĩa Mác - Lênin:</strong> Nền tảng tư tưởng chính — cung cấp thế giới quan, phương pháp luận khoa học. Hồ Chí Minh vận dụng sáng tạo vào điều kiện Việt Nam.</li>
-                </ul>
+                <h3>B. Nội dung</h3>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">I - Cơ sở hình thành tư tưởng Hồ Chí Minh</h4>
+                    <ul>
+                        <li><strong>1. Cơ sở thực tiễn:</strong><br>- <em>Thực tiễn Việt Nam:</em> Khủng hoảng đường lối cứu nước cuối TK XIX, các phong trào yêu nước thất bại. Yêu cầu bức thiết phải tìm một con đường mới.<br>- <em>Thực tiễn thế giới:</em> Chủ nghĩa tư bản chuyển sang đế quốc chủ nghĩa. Cách mạng Tháng Mười Nga thành công mở ra thời đại quá độ lên CNXH.</li>
+                        <li><strong>2. Cơ sở lý luận:</strong><br>- <em>Giá trị truyền thống dân tộc:</em> Chủ nghĩa yêu nước là cốt lõi, tinh thần đoàn kết, ý chí tự lực tự cường.<br>- <em>Tinh hoa văn hóa nhân loại:</em> Tư tưởng Nho giáo, Phật giáo; Tư tưởng dân chủ tư sản Pháp, Mỹ.<br>- <em>Chủ nghĩa Mác - Lênin:</em> Đây là tiền đề lý luận quan trọng nhất, là thế giới quan và phương pháp luận quyết định bước phát triển về chất của tư tưởng Hồ Chí Minh.</li>
+                        <li><strong>3. Nhân tố chủ quan:</strong><br>- Tư duy độc lập, tự chủ, sáng tạo. Nhãn quan chính trị sắc bén.<br>- Phẩm chất đạo đức cao đẹp, ý chí nghị lực phi thường và lòng yêu nước thương dân sâu sắc.</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">II - Quá trình hình thành và phát triển</h4>
+                    <ul>
+                        <li><strong>Trước 1911:</strong> Hình thành tư tưởng yêu nước và chí hướng cứu nước.</li>
+                        <li><strong>1911 – 1920:</strong> Tìm thấy con đường cứu nước, giải phóng dân tộc (đến với chủ nghĩa Mác-Lênin).</li>
+                        <li><strong>1921 – 1930:</strong> Hình thành cơ bản tư tưởng về con đường cách mạng Việt Nam (sáng lập Đảng, thảo Cương lĩnh chính trị đầu tiên).</li>
+                        <li><strong>1930 – 1945:</strong> Vượt qua thử thách, kiên trì giữ vững đường lối, tiến tới thắng lợi Cách mạng Tháng Tám.</li>
+                        <li><strong>1945 – 1969:</strong> Tư tưởng tiếp tục phát triển, hoàn thiện (vừa kháng chiến vừa kiến quốc).</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">III - Giá trị tư tưởng Hồ Chí Minh</h4>
+                    <div class="modal-highlight">
+                        <p><strong>1. Đối với cách mạng Việt Nam:</strong> Đưa cách mạng đi từ thắng lợi này đến thắng lợi khác, là nền tảng tư tưởng và kim chỉ nam cho hành động của Đảng.<br>
+                        <strong>2. Đối với sự phát triển tiến bộ của nhân loại:</strong> Cống hiến to lớn vào kho tàng lý luận Mác - Lênin, cổ vũ phong trào giải phóng dân tộc trên toàn thế giới.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-section">
-                <h3><i data-lucide="user"></i> Nhân tố chủ quan của Hồ Chí Minh</h3>
-                <ul>
-                    <li><strong>Phẩm chất cá nhân:</strong> Tư duy độc lập, sáng tạo; khả năng tổng kết thực tiễn xuất sắc; bản lĩnh kiên định; tầm nhìn chiến lược.</li>
-                    <li><strong>Vốn sống phong phú:</strong> 30 năm bôn ba khắp năm châu bốn biển, làm đủ nghề, trải qua nhiều quốc gia, tiếp xúc đủ mọi tầng lớp xã hội.</li>
-                    <li><strong>Lòng yêu nước nồng nàn:</strong> Động lực thôi thúc suốt đời — từ hoài bão cứu nước thuở thiếu niên đến hành trình vĩ đại của một lãnh tụ cách mạng.</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <h3><i data-lucide="milestone"></i> Các giai đoạn hình thành</h3>
-                <ul>
-                    <li><strong>Trước 1911:</strong> Hình thành tư tưởng yêu nước, chí hướng cứu dân cứu nước.</li>
-                    <li><strong>1911–1920:</strong> Tìm thấy con đường cứu nước — cách mạng vô sản.</li>
-                    <li><strong>1921–1930:</strong> Hình thành cơ bản tư tưởng về con đường cách mạng Việt Nam.</li>
-                    <li><strong>1930–1945:</strong> Vượt qua thử thách, kiên trì con đường đã lựa chọn.</li>
-                    <li><strong>1945–1969:</strong> Tư tưởng tiếp tục phát triển, hoàn thiện.</li>
+                <h3>C. Câu hỏi ôn tập</h3>
+                <ul style="list-style-type: decimal; padding-left: 20px;">
+                    <li>Phân tích những tiền đề khách quan và nhân tố chủ quan hình thành tư tưởng Hồ Chí Minh?</li>
+                    <li>Tại sao chủ nghĩa Mác - Lênin là tiền đề lý luận quan trọng nhất quyết định bản chất tư tưởng Hồ Chí Minh?</li>
+                    <li>Phân tích các thời kỳ lịch sử trong quá trình hình thành và phát triển của tư tưởng Hồ Chí Minh? Giá trị lớn lao của nó đối với cách mạng Việt Nam là gì?</li>
                 </ul>
             </div>
         `
     },
     3: {
         icon: 'flag',
-        title: 'Độc lập dân tộc gắn liền với Chủ nghĩa Xã hội',
+        title: 'Chương 3: Tư tưởng Hồ Chí Minh về Độc lập dân tộc và Chủ nghĩa xã hội',
         content: `
             <img src="images/chapter_3.png" alt="Độc lập dân tộc gắn liền với chủ nghĩa xã hội" class="modal-img" loading="lazy">
             <div class="modal-section">
-                <h3><i data-lucide="shield"></i> Tư tưởng về vấn đề dân tộc</h3>
-                <ul>
-                    <li><strong>Độc lập, tự do là quyền thiêng liêng:</strong> "Không có gì quý hơn độc lập, tự do" — đây là chân lý có giá trị muôn đời.</li>
-                    <li><strong>Kết hợp dân tộc với giai cấp:</strong> Giải phóng dân tộc phải gắn liền với giải phóng giai cấp, giải phóng con người.</li>
-                    <li><strong>Độc lập thật sự:</strong> "Nước độc lập mà dân không hưởng hạnh phúc tự do, thì độc lập cũng chẳng có nghĩa lý gì." Độc lập phải đi đôi với cơm no, áo ấm, được học hành.</li>
-                </ul>
+                <h3>A. Mục tiêu</h3>
+                <p>Nắm vững luận điểm về quyền độc lập tự do thiêng liêng của các dân tộc; tính tất yếu của con đường đi lên chủ nghĩa xã hội ở Việt Nam và mối quan hệ biện chứng, hữu cơ "độc lập dân tộc gắn liền với chủ nghĩa xã hội" trong tư tưởng Hồ Chí Minh.</p>
             </div>
             <div class="modal-section">
-                <h3><i data-lucide="rocket"></i> Tư tưởng về cách mạng giải phóng dân tộc</h3>
-                <ul>
-                    <li><strong>Đường lối:</strong> Cách mạng giải phóng dân tộc muốn thắng lợi phải đi theo con đường cách mạng vô sản (theo chủ nghĩa Mác - Lênin).</li>
-                    <li><strong>Lực lượng:</strong> Cách mạng là sự nghiệp của toàn dân, không phải của một vài cá nhân anh hùng.</li>
-                    <li><strong>Phương pháp:</strong> Kết hợp sức mạnh dân tộc với sức mạnh thời đại; bạo lực cách mạng với khả năng sáng tạo.</li>
-                    <li><strong>Quan hệ quốc tế:</strong> Cách mạng thuộc địa có thể chủ động giành thắng lợi, không phụ thuộc hoàn toàn vào cách mạng ở chính quốc — luận điểm sáng tạo của Hồ Chí Minh!</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <h3><i data-lucide="building-2"></i> Tư tưởng về CNXH ở Việt Nam</h3>
-                <ul>
-                    <li><strong>Mục tiêu:</strong> Xây dựng một xã hội công bằng, bình đẳng — dân giàu, nước mạnh, mọi người có cuộc sống ấm no, tự do, hạnh phúc.</li>
-                    <li><strong>Đặc trưng:</strong> CNXH là chế độ do nhân dân làm chủ, có nền kinh tế phát triển, văn hóa phát triển, con người được giải phóng.</li>
-                    <li><strong>Con đường:</strong> Phát triển kinh tế, cải thiện đời sống nhân dân, nâng cao dân trí, xây dựng Đảng trong sạch vững mạnh.</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <div class="modal-highlight">
-                    <p><strong>Sợi chỉ đỏ xuyên suốt:</strong> "Độc lập dân tộc gắn liền với chủ nghĩa xã hội" — đây là luận điểm trung tâm, bao trùm toàn bộ tư tưởng Hồ Chí Minh, là quy luật tất yếu của cách mạng Việt Nam.</p>
+                <h3>B. Nội dung</h3>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">I - Tư tưởng Hồ Chí Minh về độc lập dân tộc</h4>
+                    <ul>
+                        <li><strong>Độc lập, tự do là quyền thiêng liêng và bất khả xâm phạm:</strong> "Không có gì quý hơn độc lập, tự do".</li>
+                        <li><strong>Độc lập dân tộc gắn với hạnh phúc của nhân dân:</strong> Độc lập phải thực sự mang lại quyền lợi ấm no, hạnh phúc. "Nước độc lập mà dân không hưởng hạnh phúc tự do, thì độc lập cũng chẳng có nghĩa lý gì".</li>
+                        <li><strong>Kết hợp với sức mạnh thời đại:</strong> Cách mạng giải phóng dân tộc phải đi theo con đường cách mạng vô sản, dựa vào sức mạnh của toàn dân.</li>
+                        <li>Cách mạng thuộc địa có khả năng nổ ra và giành thắng lợi trước cách mạng ở chính quốc (Luận điểm sáng tạo độc đáo).</li>
+                    </ul>
                 </div>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">II - Tư tưởng Hồ Chí Minh về CNXH và xây dựng CNXH ở Việt Nam</h4>
+                    <ul>
+                        <li><strong>Quan niệm về CNXH:</strong> Một xã hội do nhân dân lao động làm chủ, có nền kinh tế phát triển cao, văn hóa tiên tiến, đậm đà bản sắc dân tộc, con người được bồi dưỡng, giải phóng toàn diện.</li>
+                        <li><strong>Tính tất yếu của CNXH ở Việt Nam:</strong> Cách mạng dân tộc dân chủ nhân dân tiến lên cách mạng XHCN là tất yếu khách quan, phù hợp với quy luật tiến hóa của nhân loại.</li>
+                        <li><strong>Thời kỳ quá độ:</strong> Quá độ bỏ qua chế độ tư bản chủ nghĩa, đây là công cuộc biến đổi sâu sắc, khó khăn, gian khổ, phức tạp và lâu dài.</li>
+                        <li><strong>Động lực xây dựng:</strong> Dựa vào sức mạnh khối đại đoàn kết, lấy lợi ích của nhân dân làm mục tiêu. "Đem tài dân, sức dân, của dân làm lợi cho dân".</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">III - Mối quan hệ giữa độc lập dân tộc và CNXH</h4>
+                    <p>Độc lập dân tộc là tiền đề, là điều kiện tiên quyết để xây dựng chủ nghĩa xã hội. Chủ nghĩa xã hội là cơ sở đảm bảo vững chắc cho độc lập dân tộc. Đây là "sợi chỉ đỏ" xuyên suốt toàn bộ di sản lý luận cũng như đường lối thực tiễn của cách mạng.</p>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">IV - Vận dụng tư tưởng trong giai đoạn hiện nay</h4>
+                    <div class="modal-highlight">
+                        <p>Kiên định con đường độc lập dân tộc gắn liền với chủ nghĩa xã hội. Phát huy sức mạnh vĩ đại của toàn dân tộc; đẩy mạnh sự nghiệp công nghiệp hoá, hiện đại hoá đất nước và hội nhập quốc tế để xây dựng Việt Nam phồn vinh, hạnh phúc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3>C. Câu hỏi ôn tập</h3>
+                <ul style="list-style-type: decimal; padding-left: 20px;">
+                    <li>Phân tích nội dung cốt lõi của tư tưởng Hồ Chí Minh về độc lập dân tộc?</li>
+                    <li>Phân tích quan điểm của Hồ Chí Minh về tính tất yếu và bản chất của chủ nghĩa xã hội ở Việt Nam?</li>
+                    <li>Tại sao độc lập dân tộc phải gắn liền với chủ nghĩa xã hội? Liên hệ và vận dụng vào công cuộc Đổi mới ở Việt Nam hiện nay?</li>
+                </ul>
             </div>
         `
     },
     4: {
         icon: 'landmark',
-        title: 'Đảng Cộng sản Việt Nam & Nhà nước của Dân',
+        title: 'Chương 4: Đảng Cộng sản Việt Nam và Nhà nước của nhân dân, do nhân dân, vì nhân dân',
         content: `
             <img src="images/chapter_4.png" alt="Đảng và Nhà nước của nhân dân" class="modal-img" loading="lazy">
             <div class="modal-section">
-                <h3><i data-lucide="users"></i> Tư tưởng về Đảng Cộng sản Việt Nam</h3>
-                <ul>
-                    <li><strong>Sự ra đời tất yếu:</strong> Đảng CSVN ra đời là sản phẩm của sự kết hợp: Chủ nghĩa Mác - Lênin + Phong trào công nhân + Phong trào yêu nước. Đây là luận điểm sáng tạo so với Lênin (chỉ có 2 yếu tố).</li>
-                    <li><strong>Bản chất:</strong> Đảng là đội tiên phong của giai cấp công nhân, đồng thời là đội tiên phong của nhân dân lao động và của cả dân tộc Việt Nam.</li>
-                    <li><strong>Vai trò lãnh đạo:</strong> "Đảng vừa là người lãnh đạo, vừa là người đầy tớ trung thành của nhân dân" — kết hợp hai tư cách trong một.</li>
-                </ul>
+                <h3>A. Mục tiêu</h3>
+                <p>Hiểu sâu sắc về tính tất yếu, bản chất của giai cấp công nhân của Đảng; nguyên tắc tổ chức sinh hoạt Đảng. Đồng thời lý giải được bản chất, cấu tạo và nguyên tắc hoạt động của Nhà nước pháp quyền xã hội chủ nghĩa trong tư tưởng của Bác.</p>
             </div>
             <div class="modal-section">
-                <h3><i data-lucide="shield-check"></i> Xây dựng Đảng trong sạch, vững mạnh</h3>
-                <ul>
-                    <li><strong>Tư tưởng:</strong> Lấy chủ nghĩa Mác - Lênin làm nền tảng tư tưởng, kim chỉ nam cho mọi hành động.</li>
-                    <li><strong>Chính trị:</strong> Đường lối đúng đắn, phục vụ nhân dân, vì lợi ích quốc gia dân tộc.</li>
-                    <li><strong>Tổ chức:</strong> Nguyên tắc tập trung dân chủ, tự phê bình và phê bình thường xuyên.</li>
-                    <li><strong>Đạo đức:</strong> Cán bộ đảng viên phải thực sự "cần, kiệm, liêm, chính, chí công vô tư".</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <h3><i data-lucide="landmark"></i> Tư tưởng về Nhà nước pháp quyền</h3>
-                <ul>
-                    <li><strong>Nhà nước "của dân, do dân, vì dân":</strong> Bao nhiêu lợi ích đều vì dân. Bao nhiêu quyền hạn đều của dân. Công cuộc đổi mới, xây dựng là trách nhiệm của dân.</li>
-                    <li><strong>Pháp quyền nhân nghĩa:</strong> Nhà nước quản lý bằng pháp luật, nhưng pháp luật phải phục vụ nhân dân, thể hiện ý chí của nhân dân.</li>
-                    <li><strong>Cán bộ nhà nước:</strong> Là "công bộc" (đầy tớ) của dân, phải gần dân, hiểu dân, lắng nghe dân. Kiên quyết chống tham ô, lãng phí, quan liêu.</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <div class="modal-highlight">
-                    <p><strong>Điểm cốt lõi:</strong> Xây dựng Đảng là then chốt, xây dựng Nhà nước phục vụ nhân dân là mục tiêu — hai nhiệm vụ gắn bó mật thiết, biện chứng với nhau.</p>
+                <h3>B. Nội dung</h3>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">I - Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam</h4>
+                    <ul>
+                        <li><strong>Tính tất yếu hình thành:</strong> Sự kết hợp giữa chủ nghĩa Mác - Lênin, phong trào công nhân và phong trào yêu nước.</li>
+                        <li><strong>Bản chất:</strong> Đảng là đội tiên phong của giai cấp công nhân, đồng thời là đội tiên phong của nhân dân lao động và của toàn dân tộc Việt Nam.</li>
+                        <li><strong>Các nguyên tắc tổ chức, sinh hoạt Đảng:</strong>
+                            <br>1. Tập trung dân chủ (Nguyên tắc căn bản nhất).
+                            <br>2. Tập thể lãnh đạo, cá nhân phụ trách.
+                            <br>3. Tự phê bình và phê bình.
+                            <br>4. Kỷ luật nghiêm minh, tự giác.
+                            <br>5. Đoàn kết thống nhất trong Đảng, gắn bó mật thiết với nhân dân.
+                        </li>
+                    </ul>
                 </div>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">II - Tư tưởng Hồ Chí Minh về Nhà nước của nhân dân, do nhân dân, vì nhân dân</h4>
+                    <ul>
+                        <li><strong>Bản chất giai cấp:</strong> Do Đảng Cộng sản lãnh đạo, mang bản chất giai cấp công nhân, thống nhất với tính nhân dân và tính dân tộc.</li>
+                        <li><strong>Nhà nước của nhân dân:</strong> Dân là chủ, quyền lực tối cao thuộc về nhân dân.</li>
+                        <li><strong>Nhà nước do nhân dân:</strong> Dân thiết lập nên Nhà nước, tổ chức, quản lý và kiểm soát Nhà nước.</li>
+                        <li><strong>Nhà nước vì nhân dân:</strong> Phục vụ lợi ích và nguyện vọng chính đáng của nhân dân, không có đặc quyền đặc lợi.</li>
+                        <li><strong>Nhà nước pháp quyền:</strong> Quản lý đất nước bằng Hiến pháp, pháp luật. Coi trọng đạo đức, pháp quyền nhân nghĩa. Chống đặc quyền, đặc lợi, quan liêu, tham nhũng.</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">III - Vận dụng tư tưởng vào công tác xây dựng Đảng và xây dựng Nhà nước</h4>
+                    <div class="modal-highlight">
+                        <p>Xây dựng Đảng, Nhà nước trong sạch, vững mạnh. Chống tha hóa quyền lực, "tự diễn biến", "tự chuyển hóa". Xây dựng đội ngũ cán bộ, công chức vừa có đức vừa có tài, là "công bộc" tận tụy trung thành của nhân dân.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3>C. Câu hỏi ôn tập</h3>
+                <ul style="list-style-type: decimal; padding-left: 20px;">
+                    <li>Phân tích quan điểm của Hồ Chí Minh về sự ra đời, bản chất và vai trò lãnh đạo của Đảng Cộng sản Việt Nam?</li>
+                    <li>Anh/chị hiểu như thế nào về điểm then chốt nhất của các nguyên tắc tổ chức sinh hoạt Đảng (Tập trung dân chủ)?</li>
+                    <li>Phân tích nội dung cốt lõi của tư tưởng: Nhà nước của dân, do dân, vì dân? Việc vận dụng nó trong công tác phòng chống tham nhũng hiện nay?</li>
+                </ul>
             </div>
         `
     },
     5: {
         icon: 'globe',
-        title: 'Đại đoàn kết dân tộc & Đoàn kết quốc tế',
+        title: 'Chương 5: Đại đoàn kết toàn dân tộc và Đoàn kết quốc tế',
         content: `
             <img src="images/chapter_5.png" alt="Đại đoàn kết toàn dân tộc" class="modal-img" loading="lazy">
             <div class="modal-section">
-                <h3><i data-lucide="heart-handshake"></i> Tư tưởng Đại đoàn kết toàn dân tộc</h3>
-                <ul>
-                    <li><strong>Vai trò:</strong> Đại đoàn kết toàn dân tộc là <strong>vấn đề chiến lược</strong>, quyết định thành công của cách mạng. "Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công."</li>
-                    <li><strong>Lực lượng:</strong> Đoàn kết rộng rãi mọi tầng lớp: công nhân, nông dân, trí thức, thanh niên, phụ nữ, đồng bào các dân tộc, tôn giáo, Việt kiều ở nước ngoài...</li>
-                    <li><strong>Nền tảng:</strong> Đoàn kết phải dựa trên lập trường giai cấp công nhân, giải quyết hài hòa lợi ích cá nhân, tập thể và xã hội.</li>
-                    <li><strong>Nguyên tắc:</strong> Tin vào dân, dựa vào dân, phấn đấu vì lợi ích của dân. Lấy lợi ích chung làm điểm tương đồng, tôn trọng sự khác biệt.</li>
-                </ul>
+                <h3>A. Mục tiêu</h3>
+                <p>Nêu rõ cơ sở lý luận, nội dung cơ bản của tư tưởng Đại đoàn kết: đây là vấn đề chiến lược xuyên suốt. Hiểu được vai trò của Mặt trận Dân tộc thống nhất và các nguyên lý của đoàn kết quốc tế (kết hợp sức mạnh dân tộc với sức mạnh thời đại).</p>
             </div>
             <div class="modal-section">
-                <h3><i data-lucide="flag"></i> Mặt trận dân tộc thống nhất</h3>
-                <ul>
-                    <li>Mặt trận là tổ chức chính trị - xã hội rộng rãi nhất, tập hợp mọi lực lượng yêu nước.</li>
-                    <li>Hoạt động theo nguyên tắc: <strong>hiệp thương dân chủ</strong>, đoàn kết - phê bình - tự phê bình.</li>
-                    <li>Thực tiễn: Mặt trận Việt Minh (1941), Hội Liên Việt, Mặt trận Tổ quốc Việt Nam — đều thể hiện rõ tư tưởng đại đoàn kết.</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <h3><i data-lucide="globe"></i> Đoàn kết quốc tế</h3>
-                <ul>
-                    <li><strong>Đoàn kết với phong trào cộng sản:</strong> Gắn bó với các nước XHCN, các Đảng Cộng sản anh em, phong trào công nhân quốc tế.</li>
-                    <li><strong>Đoàn kết với các dân tộc bị áp bức:</strong> Ủng hộ phong trào giải phóng dân tộc trên toàn thế giới. "Giúp bạn là tự giúp mình."</li>
-                    <li><strong>Đoàn kết với lực lượng hòa bình, tiến bộ:</strong> Tranh thủ sự ủng hộ rộng rãi của nhân dân tiến bộ trên thế giới.</li>
-                    <li><strong>Nguyên tắc:</strong> Độc lập tự chủ, tôn trọng lẫn nhau, bình đẳng các bên cùng có lợi.</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <div class="modal-highlight">
-                    <p><strong>Giá trị bền vững:</strong> Tư tưởng đại đoàn kết là bài học lịch sử quý giá — khi nào đoàn kết tốt thì cách mạng thắng lợi, khi nào chia rẽ thì gặp khó khăn thất bại.</p>
+                <h3>B. Nội dung</h3>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">I - Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc</h4>
+                    <ul>
+                        <li><strong>Vai trò:</strong> Là vấn đề chiến lược, quyết định thành bại của cách mạng. <em>"Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công"</em>.</li>
+                        <li><strong>Lực lượng đại đoàn kết:</strong> Rất rộng lớn, bao gồm mọi giai cấp, tầng lớp, tôn giáo, dân tộc... trên nền tảng liên minh công - nông - trí thức.</li>
+                        <li><strong>Nguyên tắc xây dựng:</strong> Lấy lợi ích chung (độc lập dân tộc, tự do của nhân dân) làm điểm đồng quy. Tin vào dân, khoan dung độ lượng, xóa bỏ mặc cảm do quá khứ.</li>
+                        <li><strong>Hình thức tổ chức:</strong> Mặt trận dân tộc thống nhất (được xây dựng và hoạt động theo nguyên tắc hiệp thương dân chủ).</li>
+                    </ul>
                 </div>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">II - Tư tưởng Hồ Chí Minh về đoàn kết quốc tế</h4>
+                    <ul>
+                        <li><strong>Sự cần thiết:</strong> Tăng cường sức mạnh cho cách mạng VN và góp phần vào sự nghiệp cách mạng thế giới. Chống lại kẻ thù chung của nhân loại (đế quốc chủ nghĩa).</li>
+                        <li><strong>Lực lượng đoàn kết:</strong> Phong trào cộng sản, phong trào công nhân quốc tế, phong trào đấu tranh giải phóng dân tộc, các lực lượng yêu chuộng hòa bình.</li>
+                        <li><strong>Nguyên tắc:</strong> Dựa trên độc lập, tự chủ, tự lực cánh sinh. Bình đẳng, tôn trọng lẫn nhau, các bên cùng có lợi. <em>"Muốn người ta giúp cho, thì trước mình phải tự giúp lấy mình đã"</em>.</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">III - Vận dụng vào sự nghiệp cách mạng trong giai đoạn hiện nay</h4>
+                    <div class="modal-highlight">
+                        <p>Tiếp tục củng cố, tăng cường khối đại đoàn kết toàn dân tộc, phát huy dân chủ XHCN. Thực hiện nhất quán đường lối đối ngoại độc lập, tự chủ, hòa bình, đa phương hóa, đa dạng hóa quan hệ quốc tế (Ngoại giao Cây tre).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3>C. Câu hỏi ôn tập</h3>
+                <ul style="list-style-type: decimal; padding-left: 20px;">
+                    <li>Phân tích vai trò của đại đoàn kết toàn dân tộc trong sự nghiệp cách mạng theo quan điểm của Hồ Chí Minh?</li>
+                    <li>Sự kết hợp giữa chủ nghĩa yêu nước và chủ nghĩa quốc tế vô sản thể hiện qua tư tưởng đoàn kết quốc tế của Bác như thế nào?</li>
+                    <li>Liên hệ việc phát huy dân chủ, đại đoàn kết toàn dân tộc tại địa phương hoặc môi trường làm việc - học tập của anh/chị?</li>
+                </ul>
             </div>
         `
     },
     6: {
         icon: 'heart',
-        title: 'Văn hóa, đạo đức, con người',
+        title: 'Chương 6: Văn hóa, Đạo đức, Con người',
         content: `
             <img src="images/chapter_6.png" alt="Văn hóa và đạo đức cách mạng" class="modal-img" loading="lazy">
             <div class="modal-section">
-                <h3><i data-lucide="palette"></i> Tư tưởng về Văn hóa</h3>
-                <ul>
-                    <li><strong>Định nghĩa:</strong> Văn hóa bao gồm mọi sáng tạo vật chất và tinh thần của con người, nhằm đáp ứng nhu cầu đời sống và đòi hỏi sinh tồn.</li>
-                    <li><strong>Chức năng:</strong> "Văn hóa soi đường cho quốc dân đi" — văn hóa không đứng ngoài mà ở trong chính trị và kinh tế, phải phục vụ nhiệm vụ cách mạng.</li>
-                    <li><strong>Xây dựng nền văn hóa mới:</strong> Có tính dân tộc, tính khoa học, tính đại chúng. Kết hợp bảo tồn truyền thống với tiếp thu tinh hoa nhân loại.</li>
-                    <li><strong>Đội ngũ trí thức:</strong> Trí thức là "vốn liếng quý báu của dân tộc", phải được trọng dụng, phát huy trong sự nghiệp xây dựng đất nước.</li>
-                </ul>
+                <h3>A. Mục tiêu</h3>
+                <p>Khẳng định vai trò của "sức mạnh mềm" - văn hóa và đạo đức. Đây là nền tảng tinh thần của xã hội, giúp sinh viên ý thức sâu sắc việc tu dưỡng, rèn luyện phẩm chất đạo đức cách mạng và trở thành con người phát triển toàn diện.</p>
             </div>
             <div class="modal-section">
-                <h3><i data-lucide="star"></i> Tư tưởng về Đạo đức cách mạng</h3>
-                <ul>
-                    <li><strong>Vai trò quyết định:</strong> Đạo đức là nền tảng, là "gốc" của người cách mạng. "Người cách mạng phải có đạo đức, không có đạo đức thì dù tài giỏi mấy cũng không lãnh đạo được nhân dân."</li>
-                    <li><strong>Chuẩn mực đạo đức:</strong>
-                        <br>• <em>Trung với nước, hiếu với dân</em> — phẩm chất hàng đầu
-                        <br>• <em>Cần, kiệm, liêm, chính, chí công vô tư</em> — phẩm chất cốt lõi  
-                        <br>• <em>Yêu thương con người</em> — phẩm chất cao đẹp
-                        <br>• <em>Tinh thần quốc tế trong sáng</em> — phẩm chất cao quý
-                    </li>
-                    <li><strong>Tu dưỡng đạo đức:</strong> Phải rèn luyện suốt đời, nói đi đôi với làm, tự phê bình nghiêm túc. "Một tấm gương sống còn có giá trị hơn một trăm bài diễn văn tuyên truyền."</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <h3><i data-lucide="smile"></i> Tư tưởng về Con người</h3>
-                <ul>
-                    <li><strong>Con người là vốn quý nhất:</strong> "Vì lợi ích mười năm thì phải trồng cây, vì lợi ích trăm năm thì phải trồng người." — Chiến lược "trồng người" là tư tưởng vĩ đại.</li>
-                    <li><strong>Con người vừa là mục tiêu, vừa là động lực:</strong> Mọi chính sách phải hướng tới con người; đồng thời con người là nguồn lực quyết định mọi thắng lợi.</li>
-                    <li><strong>Phát triển toàn diện:</strong> Xây dựng con người có đức có tài, "hồng" và "chuyên" kết hợp, phục vụ Tổ quốc, phục vụ nhân dân.</li>
-                </ul>
-            </div>
-            <div class="modal-section">
-                <div class="modal-highlight">
-                    <p><strong>Thông điệp:</strong> Văn hóa, đạo đức, con người là ba trụ cột không thể tách rời — là "sức mạnh mềm" quyết định sự phát triển bền vững của dân tộc Việt Nam.</p>
+                <h3>B. Nội dung</h3>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">I - Tư tưởng Hồ Chí Minh về văn hóa</h4>
+                    <ul>
+                        <li><strong>Khái niệm & chức năng:</strong> Văn hóa là sự tổng hợp mọi sáng tạo của con người. Có chức năng bồi dưỡng tư tưởng, soi đường cho quốc dân đi, nâng cao dân trí.</li>
+                        <li><strong>Quan hệ với các lĩnh vực khác:</strong> Văn hóa không đứng ngoài kinh tế, chính trị. Nó vừa phụ thuộc kinh tế, vừa có khả năng tác động mạnh mẽ trở lại kinh tế, chính trị.</li>
+                        <li><strong>Tính chất văn hóa mới:</strong> Tính dân tộc, tính khoa học, tính đại chúng. Giữ gìn bản sắc dân tộc đi đôi với tiếp thu tinh hoa văn hóa nhân loại.</li>
+                    </ul>
                 </div>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">II - Tư tưởng Hồ Chí Minh về đạo đức</h4>
+                    <ul>
+                        <li><strong>Vai trò:</strong> Đạo đức là cái "gốc", nền tảng của người cách mạng. <em>"Có tài mà không có đức là người vô dụng"</em>.</li>
+                        <li><strong>Các chuẩn mực đạo đức cốt lõi:</strong>
+                            <br>- Trung với nước, hiếu với dân.
+                            <br>- Cần, kiệm, liêm, chính, chí công vô tư.
+                            <br>- Yêu thương con người. Suy nghĩ và hành động trên tinh thần quốc tế trong sáng.
+                        </li>
+                        <li><strong>Nguyên tắc tu dưỡng:</strong> Nói đi đôi với làm; Xây đi đôi với chống; Tu dưỡng đạo đức suốt đời như "Ngọc càng mài càng sáng, vàng càng luyện càng trong".</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">III - Tư tưởng Hồ Chí Minh về con người</h4>
+                    <p>Con người là vốn quý nhất, là động lực để phát triển xã hội, đồng thời là mục tiêu vươn tới của giải phóng dân tộc và xây dựng CNXH. Xây dựng con người phải là một trong những mục tiêu chiến lược hàng đầu (Vì lợi ích mười năm trồng cây, trăm năm trồng người).</p>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <h4 style="color: var(--primary); margin-bottom: 8px; font-size: 1.1rem;">IV - Xây dựng văn hóa, đạo đức, con người Việt Nam hiện nay</h4>
+                    <div class="modal-highlight">
+                        <p>Xây dựng nền văn hóa tiên tiến, đậm đà bản sắc. Cán bộ, đảng viên, thế hệ trẻ gương mẫu thực hiện việc "Học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh", tạo động lực nội sinh to lớn phát triển bền vững đất nước.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3>C. Câu hỏi ôn tập</h3>
+                <ul style="list-style-type: decimal; padding-left: 20px;">
+                    <li>Phân tích vị trí, chức năng của văn hóa trong đời sống xã hội theo quan điểm của Chủ tịch Hồ Chí Minh?</li>
+                    <li>Sự cần thiết và những chuẩn mực của đạo đức cách mạng?</li>
+                    <li>Là sinh viên, anh/chị làm gì để tu dưỡng đạo đức và tham gia vào chiến lược "trồng người" hiện nay?</li>
+                </ul>
             </div>
         `
     }
@@ -608,3 +679,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ========================================
+// ANIMATED COUNTER (Stats Section)
+// ========================================
+function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    const duration = 2000;
+    const start = 0;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // easeOutQuart
+        const eased = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(eased * (target - start) + start);
+        
+        el.textContent = current.toLocaleString('vi-VN');
+        
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        } else {
+            el.textContent = target.toLocaleString('vi-VN');
+        }
+    }
+    
+    requestAnimationFrame(update);
+}
+
+const statNumbers = document.querySelectorAll('.stat-number');
+const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+statNumbers.forEach(el => counterObserver.observe(el));

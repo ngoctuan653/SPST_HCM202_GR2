@@ -60,6 +60,32 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/dong_son_hac_bg.png');
+    background-repeat: repeat;
+    background-size: 600px;
+    background-position: center calc(var(--scroll-y, 0px) * -0.08);
+    opacity: 0.7;
+    z-index: -1;
+    pointer-events: none;
+    mix-blend-mode: multiply; /* Loại bỏ nền trắng */
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+[data-theme="dark"] body::before {
+    opacity: 0.25;
+    filter: invert(1) contrast(1.2);
+    mix-blend-mode: screen; /* Loại bỏ nền đen (khi bị invert) */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1562,5 +1588,674 @@ footer {
     }
     .detail-inner {
         padding: 24px 20px;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+    .quotes-grid {
+        grid-template-columns: 1fr;
+    }
+    .works-timeline {
+        padding-left: 20px;
+    }
+    .work-year {
+        position: relative;
+        left: 0;
+        width: auto;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    .work-item {
+        padding-left: 24px;
+    }
+    .morals-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   STATS SECTION
+   ======================================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 40px 24px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.stat-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(218, 37, 29, 0.1), rgba(255, 205, 0, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+[data-theme="dark"] .stat-icon {
+    color: var(--secondary);
+}
+
+.stat-icon i {
+    width: 28px;
+    height: 28px;
+}
+
+.stat-number {
+    font-size: 3.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.stat-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ========================================
+   QUOTES SECTION
+   ======================================== */
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.quote-card {
+    position: relative;
+    padding: 36px 28px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.quote-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.quote-card:hover::before {
+    opacity: 1;
+}
+
+.quote-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.quote-card-icon {
+    color: var(--primary);
+    opacity: 0.15;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+}
+
+[data-theme="dark"] .quote-card-icon {
+    color: var(--secondary);
+}
+
+.quote-card blockquote {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text-main);
+    margin-bottom: 16px;
+}
+
+.quote-card cite {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-style: normal;
+}
+
+[data-theme="dark"] .quote-card cite {
+    color: var(--secondary);
+}
+
+/* ========================================
+   NOTABLE WORKS SECTION
+   ======================================== */
+.works-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+.works-timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    opacity: 0.25;
+}
+
+.work-item {
+    position: relative;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding-left: 40px;
+}
+
+.work-item:last-child {
+    margin-bottom: 0;
+}
+
+.work-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    border: 3px solid var(--bg-color);
+    box-shadow: 0 0 0 4px rgba(218, 37, 29, 0.15);
+    z-index: 1;
+}
+
+.work-year {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    min-width: 60px;
+}
+
+.work-content {
+    flex: 1;
+    padding: 28px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.work-content:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(6px);
+}
+
+.work-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.work-content p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.work-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.work-tags span {
+    display: inline-block;
+    padding: 4px 14px;
+    background: linear-gradient(135deg, rgba(218, 37, 29, 0.08), rgba(255, 205, 0, 0.08));
+    border: 1px solid rgba(218, 37, 29, 0.1);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+[data-theme="dark"] .work-tags span {
+    color: var(--secondary);
+    border-color: rgba(255, 205, 0, 0.15);
+}
+
+/* ========================================
+   MORALS SECTION (5 đức tính)
+   ======================================== */
+.morals-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .morals-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.moral-card {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px 32px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.moral-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.moral-card:hover::after {
+    transform: scaleX(1);
+}
+
+.moral-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+.moral-number {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    opacity: 0.06;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.moral-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(218, 37, 29, 0.1), rgba(255, 205, 0, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+[data-theme="dark"] .moral-icon {
+    color: var(--secondary);
+}
+
+.moral-icon i {
+    width: 24px;
+    height: 24px;
+}
+
+.moral-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+}
+
+.moral-card p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .stat-item {
+        padding: 24px 16px;
+    }
+    .stat-number {
+        font-size: 2.4rem;
+    }
+    .morals-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ========================================
+   COMPARE TABLE SECTION
+   ======================================== */
+.compare-table {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+}
+
+.compare-header,
+.compare-row {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr 1.5fr 1.5fr;
+}
+
+.compare-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.compare-row {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.compare-row:hover {
+    background-color: var(--bg-light);
+}
+
+.compare-col {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.compare-row .compare-col {
+    border-right: 1px solid var(--border-color);
+}
+
+.compare-col:last-child {
+    border-right: none;
+}
+
+.compare-col-label {
+    font-weight: 700;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+}
+
+.compare-col-hcm {
+    background: linear-gradient(135deg, rgba(218,37,29,0.05), rgba(255,205,0,0.05));
+    font-weight: 600;
+    color: var(--primary);
+}
+
+[data-theme="dark"] .compare-col-hcm {
+    color: var(--secondary);
+}
+
+.compare-col-hcm i[data-lucide="check-circle"] {
+    color: #22c55e;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.compare-col i[data-lucide="minus"] {
+    color: #f59e0b;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.compare-col i[data-lucide="x-circle"] {
+    color: #ef4444;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.compare-badge {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.compare-header .compare-col {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.compare-header .compare-col-hcm {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    font-weight: 800;
+}
+
+@media (max-width: 900px) {
+    .compare-header,
+    .compare-row {
+        grid-template-columns: 1fr 1fr;
+        font-size: 0.8rem;
+    }
+    .compare-col:nth-child(n+4) {
+        display: none;
+    }
+}
+
+/* ========================================
+   WORLD INFLUENCE SECTION
+   ======================================== */
+.influence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.influence-card {
+    padding: 32px 28px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.influence-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(218,37,29,0.03), rgba(255,205,0,0.03));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.influence-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.influence-card:hover::after {
+    opacity: 1;
+}
+
+.influence-region {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] .influence-region {
+    color: var(--secondary);
+}
+
+.influence-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.influence-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.influence-tag {
+    display: inline-block;
+    padding: 5px 16px;
+    background: linear-gradient(135deg, rgba(218,37,29,0.1), rgba(255,205,0,0.1));
+    border: 1px solid rgba(218,37,29,0.15);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+[data-theme="dark"] .influence-tag {
+    color: var(--secondary);
+    border-color: rgba(255,205,0,0.2);
+}
+
+@media (max-width: 900px) {
+    .influence-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .influence-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   PLEDGE SECTION (Lời hứa sinh viên)
+   ======================================== */
+.pledge-content {
+    text-align: center;
+}
+
+.pledge-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255,255,255,0.25);
+}
+
+.pledge-icon i {
+    width: 36px;
+    height: 36px;
+}
+
+.pledge-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.pledge-card {
+    padding: 32px 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    color: white;
+    transition: var(--transition);
+}
+
+.pledge-card:hover {
+    background: rgba(255,255,255,0.18);
+    transform: translateY(-6px);
+}
+
+.pledge-card i {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 16px;
+    display: block;
+    color: var(--secondary);
+}
+
+.pledge-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.pledge-card p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+    .pledge-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .pledge-cards {
+        grid-template-columns: 1fr;
     }
 }
